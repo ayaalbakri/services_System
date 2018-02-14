@@ -1,0 +1,41 @@
+<!-- <style>
+	.show-hide-massage{
+		animation: flash linear 100s infinite;
+	}
+</style> -->
+<div class="page-header">
+	<h1>User Registration </h1>
+</div>
+<!-- register inside controller (controllerAs:register) -->
+<div class="modal-content">
+<h1 class="modal-header">User Registration </h1>
+<div class="modal-body">
+<form ng-submit="register.regUser(regData)">
+	<label>Email</label>
+	<input class="form-control" type="text" name="email" placeholder="please enter your email" ng-model="register.regData.email">
+
+	<label>Username:</label>
+	<input class="form-control" type="text" name="username" placeholder="please enter your name" ng-model="register.regData.username">
+
+	<label>Password</label>
+	<input class="form-control" type="Password" name="password" placeholder="please enter your password" ng-model="register.regData.password">
+
+	<br>
+	<button class="btn btn-primary" type="submit">Register</button>
+</form>
+</div>
+</div>
+<br>
+<div class="jumbotron text-center" ng-show="register.loading">
+	<span><i class="fa fa-refresh fa-spin" style="font-size:45px"></i></span>
+	<p>Loading.....</p>
+</div>
+
+<br>
+<div class="row show-hide-massage" ng-show="register.successMsg">
+	<div class="alert alert-success">{{register.successMsg}}</div>
+</div>
+
+<div class="row show-hide-massage" ng-show="register.errorMsg">
+	<div class="alert alert-danger">{{register.errorMsg}}</div>
+</div>

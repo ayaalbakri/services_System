@@ -1,0 +1,39 @@
+<!-- <style>
+	.show-hide-massage{
+		animation: flash linear 100s infinite;
+	}
+</style> -->
+<div class="page-header">
+	<h1>User log in </h1>
+</div>
+<div class="modal-content">
+<h1 class="modal-header">User Login </h1>
+<div class="modal-body">
+<!-- register inside controller (controllerAs:register) -->
+<form ng-submit="main.doLogin(loginData)">
+	<label>Username:</label>
+	<input class="form-control" type="text" name="username" placeholder="please enter your name" ng-model="main.loginData.username">
+
+	<label>Password</label>
+	<input class="form-control" type="Password" name="password" placeholder="please enter your password" ng-model="main.loginData.password">
+
+	<br>
+	<button class="btn btn-primary" type="submit">log in </button>
+</form>
+</div>
+</div>
+<br>
+<div class="jumbotron text-center" ng-show="main.loading">
+	<span><i class="fa fa-refresh fa-spin" style="font-size:45px"></i></span>
+	<p>Loading.....</p>
+</div>
+
+<br>
+
+<div class="row show-hide-massage" ng-show="main.successMsg">
+	<div class="alert alert-success">{{main.successMsg}}</div>
+</div>
+
+<div class="row show-hide-massage" ng-show="main.errorMsg">
+	<div class="alert alert-danger">{{main.errorMsg}}</div>
+</div>
