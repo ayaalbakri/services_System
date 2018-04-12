@@ -43,5 +43,11 @@ app.controller('regCtrl',function($http,$location,$timeout,user){
   }
   });
 
-	}
+    }
+    this.get = function () {
+        $http.get("http://localhost:54185/api/Home")
+            .then(function (response) {
+              connsole.log("husaaaammmmmiaaaaa"+response)
+            });
+    }
 })

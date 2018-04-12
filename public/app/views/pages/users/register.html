@@ -10,19 +10,21 @@
 <div class="modal-content">
 <h1 class="modal-header">User Registration </h1>
 <div class="modal-body">
-<form ng-submit="register.regUser(regData)">
-	<label>Email</label>
-	<input class="form-control" type="text" name="email" placeholder="please enter your email" ng-model="register.regData.email">
+    <form ng-submit="register.regUser(regData)">
+        <label>Email</label>
+        <input class="form-control" type="text" name="Name" placeholder="please enter your email" ng-model="register.regData.email">
 
-	<label>Username:</label>
-	<input class="form-control" type="text" name="username" placeholder="please enter your name" ng-model="register.regData.username">
+        <label>Username:</label>
+        <input class="form-control" type="text" name="username" placeholder="please enter your name" ng-model="register.regData.username">
 
-	<label>Password</label>
-	<input class="form-control" type="Password" name="password" placeholder="please enter your password" ng-model="register.regData.password">
+        <label>Password</label>
+        <input class="form-control" type="Password" name="password" placeholder="please enter your password" ng-model="register.regData.password">
 
-	<br>
-	<button class="btn btn-primary" type="submit">Register</button>
-</form>
+        <br>
+        <button class="btn btn-primary" type="submit">Register</button>
+
+    </form>
+    <button ng-click="register.get">get data</button>
 </div>
 </div>
 <br>

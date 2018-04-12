@@ -15,9 +15,15 @@ app.config(function($routeProvider) {
     	templateUrl:'app/views/pages/users/register.html',
     	controller : 'regCtrl',
     	controllerAs:'register'
-    })
+        })
+        .when("/about", {
+            templateUrl: '/app/views/pages/users/about.html',
+            controller: 'gitCtrl'
+            
+        })
 
     .otherwise({
     	redirectTo : '/'
     })
+
 });

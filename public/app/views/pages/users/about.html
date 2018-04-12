@@ -1,0 +1,37 @@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th scope="col">Book Name</th>
+            <th scope="col">Note</th>
+            <th scope="col">Email</th>
+            <th scope="col">Treatment Title</th>
+            <th scope="col">TimeSlot</th>
+            <th scope="col">Delete</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="book in booking | filter: {isDeleted: false}">
+
+            <td>{{book.name}}</td>
+            <td>{{book.note}}</td>
+            <td>{{book.email}}</td>
+            <td>{{book.treatment.treatmentTitle}}</td>
+            <td>{{book.timeSlot.timeSlotTitle}}</td>
+            <td><input type="button" ng-click="deleteBook(book.bookingId)" value="Delete"></td>
+
+
+
+
+
+
+
+
+        </tr>
+       
+    </tbody>
+</table>

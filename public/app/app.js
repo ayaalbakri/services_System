@@ -2,8 +2,12 @@ var app = angular.module('userApp', ['appRoutes','userControllers',"userServices
 // app.controller('myCtrl', function($scope) {
 //     $scope.name = "John Doe";
 // });
-app.config(function($httpProvider){
-	// $httpProvider.intersepters.push('intersept');
-	console.log("hiiiii")
-	$httpProvider.interceptors.push('intersept');
-})
+app.config(function () {
+    // $httpProvider.intersepters.push('intersept');
+   
+    console.log("hiiiii")
+    //$httpProvider.interceptors.push('intersept');
+   
+    
+});
+//app.use(allowCrossDomain);
