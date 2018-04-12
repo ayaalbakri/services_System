@@ -1,0 +1,38 @@
+﻿@using QuestApp.ViewModels
+@model Booking 
+
+
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form  method="post">
+    <label asp-for="Name"></label>
+    <input asp-for="Name"  />
+    <span asp-validation-for="Name" style="color:red"></span>
+    <br>
+    <label asp-for="Mobile"></label> :
+    <input asp-for="Mobile" />
+    <span asp-validation-for="Mobile" style="color:red"></span>
+    <br>
+    <label asp-for="Email"></label> :
+    <input asp-for="Email" />
+    <span asp-validation-for="Email" style="color:red"></span>
+    <br>
+    @*<label asp-for="Treatment.TreatmentTitle"></label> 
+   <select asp-for="Treatment" asp-items="Html.GetEnumSelectList<>()">
+    </select>*@
+    @*Select : <select asp-for="@Model.Treatment.TreatmentTitle" for-item="@Model.Treatment.TreatmentTitle"></select>*@
+
+    <br>
+    <label asp-for="BookedDate"></label> :
+    <input asp-for="BookedDate" />
+    <span asp-validation-for="BookedDate" style="color:red"></span>
+    <br>
+    <label asp-for="Note"></label> :
+    <textarea rows="4" asp-for="Note" ></textarea>
+    <span asp-validation-for="Note" style="color:red"></span>
+    <input type="submit" name="submit" value="submit" />
+</form>

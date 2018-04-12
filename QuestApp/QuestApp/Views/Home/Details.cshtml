@@ -1,0 +1,42 @@
+﻿@model QuestApp.Models.Booking
+@{
+    ViewData["Title"] = "Details";
+}
+@*<h2>@Model.Name</h2>*@
+@*<a class="btn btn-primary" data-toggle="modal" data-target="#myModal">More Inf</a>*@
+<h1>Details</h1>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Booking Name</th>
+            <th>Mobile</th>
+            <th>Notes</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Treatment</th>
+            <th>Time Slot</th>
+
+            
+        </tr>
+   </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Mobile</td>
+            <td>@Model.Note</td>
+            <td>@Model.Email</td>
+            <td>@Model.BookedDate.ToShortDateString()</td>
+            <td>@Model.Treatment.TreatmentTitle</td>
+            <td>@Model.TimeSlot.TimeSlotTitle</td>
+
+
+
+        </tr>
+        
+    </tbody>
+</table>
+@*<script>
+    console.log(@Model.Treatment.TreatmentTitle)
+</script>*@

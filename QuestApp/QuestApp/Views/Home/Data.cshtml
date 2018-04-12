@@ -1,0 +1,18 @@
+﻿@model QuestApp.ViewModels.BookingListViewModel
+@{
+    ViewData["Title"] = "Data";
+}
+
+<h2>Data</h2>
+
+<div>
+    @foreach (var restaurant in Model.Bookings)
+    {
+        <h1> @restaurant.Name</h1>
+            <h2>@restaurant.Name</h2>
+           
+            @*@Html.ActionLink("Go", "Details", new { id = restaurant.RestaurantId })*@
+            @*using tag helper asp-action (action name) asp-route-id(parameter id)*@
+            @*<a asp-action="Details" asp-route-id="@restaurant.RestaurantId">More Inf</a>*@
+    }
+</div>

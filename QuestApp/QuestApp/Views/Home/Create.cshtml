@@ -1,0 +1,77 @@
+﻿@model QuestApp.Models.Booking
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Booking</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="Post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mobile" class="control-label"></label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Note" class="control-label"></label>
+                <input asp-for="Note" class="form-control" />
+                <span asp-validation-for="Note" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookedDate" class="control-label"></label>
+                <input asp-for="BookedDate" class="form-control" />
+                <span asp-validation-for="BookedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div >
+                    <label asp-for="Treatment.TreatmentTitle" class="control-label"></label>
+                        <select asp-for="treatmentId" asp-items="@(new SelectList(@ViewBag.ListOfItems,"id","TreatmentTitle"))" class="form-control"></select>
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label asp-for="TimeSlot.TimeSlotTitle"> </label>
+                        <select asp-for="TimeSlotId" asp-items="@(new SelectList(@ViewBag.ListOfTimes,"Id","TimeSlotTitle"))"  class="form-control"></select>
+                   
+                </div>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="TreatmentId" class="control-label"></label>
+                <select asp-for="TreatmentId" class ="form-control" asp-items="ViewBag.TreatmentId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeSlotId" class="control-label"></label>
+                <select asp-for="TimeSlotId" class ="form-control" asp-items="ViewBag.TimeSlotId"></select>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="reset" value="Reset" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Inf">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,125 @@
+﻿
+
+@model IEnumerable<QuestApp.Models.Booking>
+
+@{
+    ViewData["Title"] = "Inf";
+}
+<h2>Search</h2>
+<p>Type something in the input field to search the table for first names emails ....:</p>
+@using (Html.BeginForm("Inf", "Home", FormMethod.Get, new { @class = "form-inline" }))
+{
+    @Html.TextBox("search", null, new { @placeholder = "Search With Name", @class = "form-control" })
+    @Html.TextBox("searchNum", null, new { @placeholder = "Search With Mobile ", @class = "form-control" })
+    <input type="submit" value="submit" class="btn btn-default" />
+
+}
+<br>
+
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+<br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Booking Name</th>
+                <th>Mobile</th>
+                <th>Notes</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Treatment</th>
+                <th>Time</th>
+                <th>Details</th>
+                <th>Delete</th>
+                <th>Edit</th>
+
+
+
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            @if (item.IsDeleted == false)
+            {
+                <tbody id="myTable">
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Note)</td>
+                        <td> @Html.DisplayFor(modelItem => item.Email)</td>
+                        <td> @Html.DisplayFor(modelItem => item.BookedDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Treatment.TreatmentTitle)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TimeSlot.TimeSlotTitle)</td>
+
+                        <td><button type="button" class="search btn-info" id="@item.BookingId" data-assigned-id="@item.BookingId" data-toggle="modal" data-target="#exampleModalLong">More Inf</button></td>
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.BookingId }, new { onclick = "return confirm('Are sure wants to delete?');" })
+                        </td>
+                        <td><a asp-action="Edit" asp-route-id="@item.BookingId">Edit</a></td>
+
+                    </tr>
+
+                </tbody>
+
+
+
+            }
+        }
+    </table>
+
+</div>
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.BookingId">Edit</a> |*@
+    <a asp-action="Create">Back to Create Page</a>
+</div>
+
+<script type="text/javascript">
+        $(function () {
+            $('.search').click(function () {
+                var id = $(this).data('assigned-id');
+                var route = '@Url.Action("Details", "Home")/' + id;
+                $('#partial').load(route);
+
+            });
+
+        });
+</script>
+@*<script type="text/javascript">
+        $(function () {
+            $('.delete').click(function () {
+                var id = $(this).data('assigned-id');
+                var route = '@Url.Action("Delete", "Home")';
+                $('#Delete').load(route);
+
+            });
+
+        });
+</script>*@
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="partial">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+

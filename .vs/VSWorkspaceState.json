@@ -5,12 +5,11 @@
     "\\public",
     "\\public\\app",
     "\\public\\app\\controllers",
-    "\\public\\app\\services",
     "\\public\\app\\views",
     "\\public\\app\\views\\pages",
     "\\public\\app\\views\\pages\\users",
     "\\public\\assets"
   ],
-  "SelectedNode": "\\public\\app\\views\\pages\\users\\register.html",
+  "SelectedNode": "\\public\\app\\controllers\\about.js",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,11 @@
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\b\QuestApp\Debug\netcoreapp2.0\QuestApp.deps.json
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\b\QuestApp\Debug\netcoreapp2.0\QuestApp.runtimeconfig.json
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\b\QuestApp\Debug\netcoreapp2.0\QuestApp.runtimeconfig.dev.json
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\b\QuestApp\Debug\netcoreapp2.0\QuestApp.dll
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\b\QuestApp\Debug\netcoreapp2.0\QuestApp.pdb
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\i\QuestApp\Debug\netcoreapp2.0\QuestApp.csprojResolveAssemblyReference.cache
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\i\QuestApp\Debug\netcoreapp2.0\QuestApp.csproj.CoreCompileInputs.cache
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\i\QuestApp\Debug\netcoreapp2.0\QuestApp.AssemblyInfoInputs.cache
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\i\QuestApp\Debug\netcoreapp2.0\QuestApp.AssemblyInfo.cs
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\i\QuestApp\Debug\netcoreapp2.0\QuestApp.dll
+C:\Users\Aya\Desktop\QuestApp\.vs\QuestApp\lut\0\i\QuestApp\Debug\netcoreapp2.0\QuestApp.pdb
